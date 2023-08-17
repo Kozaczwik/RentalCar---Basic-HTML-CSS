@@ -1,0 +1,740 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+html::-webkit-scrollbar- {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+
+:root{
+    --main-color:#AB1F1C;
+    --text-color:#010101;
+    --bg-color: #ffffff;
+    --bg-even-color:#f6f6fa;
+    --header-color: #f6f6fa;
+    --itmes-color: #473fa0;
+    --big-font: 2.5rem;
+    --h2-font: 1.25rem;
+    --p-font: 0.9rem;
+}
+
+*::selection{
+    background: var(--main-color);
+    color: #fff;
+}
+body{
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+}
+section{
+    padding: 50px 100px;
+
+}
+
+
+ /* -----------> START HEADER <---------------- */
+
+ header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--header-color);
+    padding: 15px 100px;
+    filter:drop-shadow(4px 5px 4px var(--text-color));
+
+ }
+ .navbar{
+    display: flex;
+ }
+ .navbar li{
+    position: relative;
+ }
+ .navbar a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    font-weight: 500;
+
+ }
+ .navbar a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+ }
+ .navbar a:hover:after{
+    width: 100%;
+ }
+
+ #menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+ }
+
+ .header-btn a{
+    padding: 10px 32px;
+    color: var(--text-color);
+    font-weight: 500;
+ }
+.header-btn .sign-in{
+    background: var(--itmes-color);
+    color: #fff;
+    border-radius: 1.5rem;
+    transition: 0.3s;
+
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+
+}
+ 
+ .logo img{
+    width: 50px;
+    
+
+}
+/* -----------> END HEADER <---------------- */
+
+
+
+/* -----------> START HOME <---------------- */
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(/img/Car\ Website\ –\ 1@2x.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+
+}
+.text span{
+    color: var(--main-color);
+    
+}
+.text p{
+    margin: 00.5rem 0 1rem;
+}
+.app-stores{
+    display: flex;
+}
+
+.app-stores img{
+    width: 100px;
+    margin-left: 1rem;
+    cursor: pointer;
+
+}
+.form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.input-box span{
+    font-weight: 500;
+}
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-container form .btn{
+    flex: 1 1 7rem;
+    padding: 10px 70px;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--itmes-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: .3s;
+}
+.form-container form .btn:hover{
+    background: var(--main-color);
+
+}
+
+/* -----------> END HOME <---------------- */
+/* -----------> START INFO <---------------- */
+.heading-info{
+    text-align: center;
+}
+
+.heading-info span{
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+.heading-info h1{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+}
+.info-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+.info-container .box{
+    text-align: center;
+    padding: 20px;
+}
+.box h1{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 1.4rem 0 0.5rem;
+}
+.box h2{
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 400;
+
+}
+.box-icon i{
+    font-size: 44px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+.info-container .box .bx:hover,
+.info-container .box .bxs-calendar-check{
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* -----------> END INFO <---------------- */
+
+/* -----------> START CARS <---------------- */
+
+#cars{
+    background-color: var(--bg-even-color);
+}
+.heading{
+    text-align: center;
+
+}
+.heading span{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.heading h2{
+
+    font-size: 1.7rem;
+
+
+}
+.btn-slider{
+
+    display: inline-block;
+    padding: 7.5px 15px;
+    margin-left: 1vh;
+    margin-top: 1vh;
+    background: var(--itmes-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+ }
+
+.cars .cars-silder .slide{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.6rem;
+    align-items: center; 
+}
+.cars .cars-silder .slide .content{
+    flex: 1 1 45rem;
+}
+.cars .cars-silder .slide .slide-image{
+    flex: 1 1 45rem;
+    
+}
+
+.cars .cars-silder .slide .slide-image img{
+    width: 100%;
+    border-radius: 1rem;
+    
+}
+.cars .cars-silder .slide .content span{
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.cars .cars-silder .slide .content p{
+    font-size: var(--p-font)
+    
+}
+.cars .cars-silder .slide .content h2{
+    font-size: var(--h2-font);
+
+}
+.next{
+    font-weight: 800;
+
+}
+.prev{
+    font-weight: 800;
+}
+#next{
+    color: var(--itmes-color);
+ }
+ #prev{
+    color: var(--itmes-color);
+ }
+/* -----------> END CARS <---------------- */
+/* -----------> START ABOUT <---------------- */
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.6rem;
+    align-items: center;
+}
+.about-img img{
+    max-width: 100%;
+    width: 640px;
+    height: auto;
+}
+.about-text span{
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.about-text h2{
+    font-size: var(--h2-font);
+    margin: 0.9rem 0 1.3rem;
+}
+.about-text p{
+
+    line-height: 1.7;
+}
+.about .btn-about{
+
+    display: inline-block;
+    padding: 7.5px 15px;
+    margin-left: 1vh;
+    margin-top: 1vh;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+    transition: .4s;
+}
+.btn-about:hover{
+    transform: scale(1.1) translateY(5px);
+    padding: 15px;
+ }
+/* -----------> END ABOUT <---------------- */
+/* -----------> START WHYUS <---------------- */
+
+#whyUs{
+    background-color: var(--bg-even-color);
+}
+
+.whyUs .heading{
+    text-align: center;
+}
+.whyUs .heading span{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.whyUs .heading h2{
+    font-size: var(--h2-font);
+}
+.whyUs .whyUs-silder .slide{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-gap: 1.6rem;
+    align-items: center;
+}
+.content{
+text-align: center;
+}
+.whyUs .whyUs-silder .slide .content{
+    flex: 1 1 45rem;
+}
+.whyUs .whyUs-silder .slide .content p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.whyUs .whyUs-silder .slide .content i{
+    background-color: var(--bg-even-color);
+    font-size: 70px;
+    padding: 10px;
+    border-radius: 1rem;
+    color: var(--main-color);
+
+    
+}
+.whyUs .whyUs-silder .slide .content .bx:hover{
+    color: #878788;
+}
+#whyusNext{
+    color: #010101;
+}
+#whyusPrev{
+    color: #010101;
+}
+
+/* -----------> END WHYUS <---------------- */
+
+/* -----------> START newsletter <---------------- */
+
+.newsletter{
+    background: linear-gradient(to top right, #AB1F1C, #d73a13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newsletter h2{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.newsletter .box{
+
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    width: 360px;
+    justify-content: space-between;
+}
+.newsletter .box input{
+    border: none;
+    outline: none;
+}
+.newsletter .box .btn{
+    background: #473fa0;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 0.5rem;
+    margin-left: 8%;
+
+}
+
+/* -----------> END NEWSLETTER <---------------- */
+/* -----------> START FOOTER <---------------- */
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    width: 25%;
+}
+.col h4{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    position: relative;
+
+}
+
+.col h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background: var(--main-color);
+}
+.col ul li:not(:last-child){
+    margin-bottom: 15px;
+
+}
+
+.col ul li a{
+    color: #363636;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: capitalize;
+    transition: .4s;
+
+}
+.col ul li a:hover{
+    color: var(--itmes-color);
+    transform: translateX(-12px);
+}
+.col .social a{
+    height: 50px;
+    width: 50px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+
+}
+
+.col .social a:hover{
+    transform: scale(1.2);
+    color: var(--bg-color);
+    background-color: var(--text-color);
+
+}
+.via{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: -1rem;
+    place-items: center;
+
+
+}
+.via .via-img img{
+
+    width: 80%;
+}
+
+/* -----------> END FOOTER <---------------- */
+/* -----------> START MEDIA QUERY <---------------- */
+
+@media (max-width: 1560px) {
+    header{
+        padding: 15px 40px;
+    }
+    :root{
+        --big-font: 3.5rem;
+        --h2-font: 2rem;
+    }
+  }
+  @media only screen and (max-width: 1140px) {
+    section{
+        padding: 50px 8%;
+    }
+
+    #menu-icon{
+        display: initial;
+        color: var(--text-color);
+
+    }
+    header .navbar{
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: var(--bg-even-color);
+        transition: .3s;
+
+    }
+    header .navbar.active{
+        top: 70px;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+
+    }
+    .home{
+        padding: 80px 50px;
+    }
+    .form-container form{
+        padding: 10px 10px;
+        margin-left: -4%;
+        margin-bottom: -2%;
+    }
+    .col{
+        width: 50%;
+        margin-bottom: 10px;
+
+    }
+    .cta h2{
+        width: 90%;
+        margin-left: 7%;
+        
+    }
+    .cta a{
+        width: 50%;
+
+    }
+
+  }
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 40px;
+    }
+    section{
+        padding: 50px 40px;
+    }
+}
+@media (max-width: 811px) {
+    .home{
+        background-position: left;
+    }
+    .form-container form{
+        bottom: 0.2rem;
+        left: 40px;
+    }
+    .cars .cars-silder .slide{
+        grid-template-columns: 1fr;
+    }
+
+
+}
+@media (max-width: 768px) {
+    header{
+        padding: 11px 40px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .sign-up{
+        display: none;
+    }
+    .text h1{
+        font-size: 2.5rem;
+    }
+    .home{
+        grid-template-columns: 1fr;
+    }
+    .form-container form{
+        position: unset;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .heading span{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    .heading h1{
+        font-size: 1.3rem;
+    }
+    .col{
+        width: 50%;
+        margin-bottom: 10px;
+
+    }
+
+    .cta h2{
+        width: 90%;
+        margin-left: 7%;
+        
+    }
+    .cta a{
+        width: 50%;
+
+}
+.whyUs .whyUs-silder .slide{
+    grid-template-columns: 1fr;
+
+}
+}
+@media (max-width: 568px) {
+    .newsletter .box{
+        width: 284px;
+    }
+    .newsletter .box .btn{
+        padding: 5px 10px;
+        margin-left: -3%;
+    }
+    .home{
+        padding: 80px 20px;
+    }
+    .form-container{
+        padding-top: 2rem;
+    }
+    .whyUs .whyUs-silder .slide{
+        grid-template-columns: 1fr;
+    
+    }
+}
+
+@media (max-width: 350px) {
+    header{
+        padding: 6px 14px;
+    }
+    .logo img{
+        width: 30%;
+    }
+    section{
+        padding: 50px 14px;
+    }
+    .header-btn .sign-in{
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .text h1{
+        font-size: 2rem;
+    
+    }
+    .form-container{
+        padding: 2rem;
+
+    }
+    #menu-icon{
+        margin-left: -40%;
+    }
+    
+    
+}
